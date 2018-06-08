@@ -54,7 +54,10 @@
         owner: root
         group: root
 
-    - name: Install and run etherpad
-      raw: bash /opt/etherpad/bin/run.sh --root
+    - name: Install dependencies
+      raw: bash /opt/etherpad/bin/installDeps.sh --root
+
+    - name: Run etherpad
+      raw: bash /opt/etherpad/bin/run.sh --root &
 
 # vim: ts=2 et nowrap autoindent
