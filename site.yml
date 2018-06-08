@@ -23,7 +23,7 @@
         mode: 0644
 
     - name: Add nodesource key
-      raw: wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -'
+      raw: wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 
 - hosts: all
   remote_user: root
