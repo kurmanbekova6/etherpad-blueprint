@@ -55,6 +55,6 @@
         group: root
 
     - name: Install and run etherpad
-      raw: bash /opt/etherpad --root
+      raw: bash /opt/etherpad/bin/run.sh --root
 
 # vim: ts=2 et nowrap autoindent
