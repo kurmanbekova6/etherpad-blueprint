@@ -44,6 +44,11 @@
         remote_src: yes
         validate_certs: no
 
+    - name: Clean up
+        file:
+          path: /opt/etherpad
+          state: absent
+
     - name: Move files
       command: bash -c "mkdir -p /opt/etherpad && mv /tmp/etherpad*/* /opt/etherpad" 
 
@@ -57,7 +62,21 @@
     - name: Install dependencies
       raw: bash /opt/etherpad/bin/installDeps.sh --root
 
-    - name: Run etherpad
-      raw: bash /opt/etherpad/bin/run.sh --root &
+    - name: Set up service
+      copy:
+        src: systemd/etherpad.service
+        dest: /etc/systemd/system/
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: Reload systemd
+      raw: systemctl daemon-reload
+
+    - name: Enable service
+      service:
+        name: etherpad
+        enabled: yes
+        state: started
 
 # vim: ts=2 et nowrap autoindent

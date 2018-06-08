@@ -1,0 +1,11 @@
+[Unit]
+Description=Etherpad
+
+[Service]
+Environment="NODE_ENV=production"
+WorkingDirectory=/opt/etherpad
+ExecStart=/usr/bin/node /opt/etherpad/node_modules/ep_etherpad-lite/node/server.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
