@@ -30,6 +30,9 @@
   remote_user: root
   tasks: 
 
+    - name: Update repository metadata
+      raw: apt-get update
+
     - name: Install required debs
       apt: 
         name: "{{ item }}"
