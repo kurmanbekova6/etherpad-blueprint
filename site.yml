@@ -45,9 +45,9 @@
         validate_certs: no
 
     - name: Clean up
-        file:
-          path: /opt/etherpad
-          state: absent
+      file:
+        path: /opt/etherpad
+        state: absent
 
     - name: Move files
       command: bash -c "mkdir -p /opt/etherpad && mv /tmp/etherpad*/* /opt/etherpad" 
