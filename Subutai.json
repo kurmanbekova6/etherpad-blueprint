@@ -42,8 +42,8 @@
         "ansible-playbook": "site.yml",
         "extra-vars": [
             {
-                "key": "domain_name",
-                "value": "${domainName}"
+                "key": "domain_name1",
+                "value": "${domainName1}"
             }
         ],
         "groups": [
