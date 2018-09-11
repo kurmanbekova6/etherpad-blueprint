@@ -13,9 +13,21 @@
                 {
                     "protocol": "http",
                     "domain": "${domainName}",
-                    "internal-port": "9001",
+                    "internal-port": "3000",
                     "external-port": "80"
-                }
+                },
+                  {
+                    "protocol": "tcp",
+                    "domain": "${domainName2}",
+                    "internal-port": "1883",
+                    "external-port": "1883"
+                },
+                  {
+                    "protocol": "tcp",
+                    "domain": "${domainName2}",
+                    "internal-port": "8087",
+                    "external-port": "8087"
+                },
             ]
         }
     ],
