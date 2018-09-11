@@ -44,6 +44,14 @@
             {
                 "key": "domain_name1",
                 "value": "${domainName1}"
+            },
+             {
+                "key": "domain_name2",
+                "value": "${domainName2}"
+            },
+             {
+                "key": "domain_name3",
+                "value": "${domainName3}"
             }
         ],
         "groups": [
