@@ -62,7 +62,19 @@
             "default": "etherpad",
             "validation": "[a-zA-Z0-9]+"
         },
-        "domainName": {
+        "domainName1": {
+            "description": "Enter the application domain name",
+            "type": "domain",
+            "default": "change.the.domain",
+            "validation": "[a-zA-Z0-9]+"
+        },
+          "domainName2": {
+            "description": "Enter the application domain name",
+            "type": "domain",
+            "default": "change.the.domain",
+            "validation": "[a-zA-Z0-9]+"
+        },
+          "domainName3": {
             "description": "Enter the application domain name",
             "type": "domain",
             "default": "change.the.domain",
