@@ -27,7 +27,7 @@
                     "domain": "${domainName3}",
                     "internal-port": "8087",
                     "external-port": "8087"
-                },
+                }
             ]
         }
     ],
